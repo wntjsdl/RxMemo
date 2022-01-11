@@ -15,6 +15,8 @@
 		633B219F278DAF5C0093906F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 633B219E278DAF5C0093906F /* Assets.xcassets */; };
 		633B21A2278DAF5C0093906F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 633B21A0278DAF5C0093906F /* LaunchScreen.storyboard */; };
 		633B21AF278DB4F30093906F /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633B21AE278DB4F30093906F /* Memo.swift */; };
+		633B21B1278DB60B0093906F /* MemoStorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633B21B0278DB60B0093906F /* MemoStorageType.swift */; };
+		633B21B5278DB6F00093906F /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633B21B4278DB6F00093906F /* MemoryStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		633B21A1278DAF5C0093906F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		633B21A3278DAF5C0093906F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		633B21AE278DB4F30093906F /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		633B21B0278DB60B0093906F /* MemoStorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStorageType.swift; sourceTree = "<group>"; };
+		633B21B4278DB6F00093906F /* MemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
 		687D3B03FB1F06759D35C61C /* Pods-RxMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMemo.release.xcconfig"; path = "Target Support Files/Pods-RxMemo/Pods-RxMemo.release.xcconfig"; sourceTree = "<group>"; };
 		AEAB0A1D9E24F18CB0F39EAF /* Pods_RxMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,7 +78,6 @@
 				633B2194278DAF5A0093906F /* SceneDelegate.swift */,
 				633B219E278DAF5C0093906F /* Assets.xcassets */,
 				633B21A3278DAF5C0093906F /* Info.plist */,
-				633B219B278DAF5A0093906F /* RxMemo.xcdatamodeld */,
 			);
 			path = RxMemo;
 			sourceTree = "<group>";
@@ -106,6 +109,9 @@
 		633B21AC278DB36F0093906F /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				633B21B3278DB6C50093906F /* CoreDataStorage */,
+				633B21B2278DB6B30093906F /* MemoryStorage */,
+				633B21B0278DB60B0093906F /* MemoStorageType.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -115,6 +121,22 @@
 			children = (
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		633B21B2278DB6B30093906F /* MemoryStorage */ = {
+			isa = PBXGroup;
+			children = (
+				633B21B4278DB6F00093906F /* MemoryStorage.swift */,
+			);
+			path = MemoryStorage;
+			sourceTree = "<group>";
+		};
+		633B21B3278DB6C50093906F /* CoreDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				633B219B278DAF5A0093906F /* RxMemo.xcdatamodeld */,
+			);
+			path = CoreDataStorage;
 			sourceTree = "<group>";
 		};
 		802570DF9918A5685EF2E16C /* Pods */ = {
@@ -249,7 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				633B21B5278DB6F00093906F /* MemoryStorage.swift in Sources */,
 				633B2193278DAF5A0093906F /* AppDelegate.swift in Sources */,
+				633B21B1278DB60B0093906F /* MemoStorageType.swift in Sources */,
 				633B2195278DAF5A0093906F /* SceneDelegate.swift in Sources */,
 				633B219D278DAF5A0093906F /* RxMemo.xcdatamodeld in Sources */,
 				633B21AF278DB4F30093906F /* Memo.swift in Sources */,
