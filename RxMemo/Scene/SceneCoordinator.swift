@@ -1,5 +1,5 @@
 //
-//  SceneCoodinator.swift
+//  SceneCoordinator.swift
 //  RxMemo
 //
 //  Created by JuSun Kang on 2022/01/11.
@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class SceneCoodinator: SceneCoordinatorType {
+class SceneCoordinator: SceneCoordinatorType {
     private let bag = DisposeBag()
     
     private var window: UIWindow
