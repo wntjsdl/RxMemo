@@ -51,22 +51,26 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
         
         editButton.rx.action = viewModel.makeEditAction()
         
+        deleteButton.rx.action = viewModel.makeDeleteAction()
+        
+//        shareButton.rx.action = viewModel.makeShareAction()
+        
         shareButton.rx.tap
             .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] _ in
                 guard let memo = self?.viewModel.memo.content else { return }
-                
+
                 let vc = UIActivityViewController(activityItems: [memo], applicationActivities: nil)
                 self?.present(vc, animated: true, completion: nil)
             })
             .disposed(by: rx.disposeBag)
         
-//        var backButton = UIBarButtonItem(title: nil, style: .done, target: nil, action: nil)
-//        viewModel.title
-//            .drive(backButton.rx.title)
-//            .disposed(by: rx.disposeBag)
-//        backButton.rx.action = viewModel.popAction
-//        navigationItem.hidesBackButton = true
-//        navigationItem.leftBarButtonItem = backButton
+        var backButton = UIBarButtonItem(title: nil, style: .done, target: nil, action: nil)
+        viewModel.title
+            .drive(backButton.rx.title)
+            .disposed(by: rx.disposeBag)
+        backButton.rx.action = viewModel.popAction
+        navigationItem.hidesBackButton = true
+        navigationItem.leftBarButtonItem = backButton
     }
 }
